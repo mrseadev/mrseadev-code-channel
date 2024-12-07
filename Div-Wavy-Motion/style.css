@@ -1,0 +1,21 @@
+.wave-box {
+  width: 100px;
+  margin: 50px auto;
+  height: 100px;
+  background-color: #0158db;
+  border-radius: 10px;
+  position: relative;
+  animation: wave 2s infinite linear;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(15deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
