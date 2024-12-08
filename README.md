@@ -1,2 +1,2 @@
 Code for MrSeaDev Youtube Channel
-✨ [Đăng ký kênh](https://youtube.com/@MrSeadev?sub_confirmation=1)
+✨ [Subscribe to the channel](https://youtube.com/@MrSeadev?sub_confirmation=1)
