@@ -1,0 +1,74 @@
+:root {
+  --blue: #0a4dc9;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  margin: 0;
+  background-color: #c7c2c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mrs-button {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--blue);
+  padding: 0.5em 2em;
+  border: 2px solid var(--blue);
+  border-radius: 999px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(234, 248, 235, 0.1);
+  transition: all 0.3s ease-out;
+}
+
+.mrs-button:hover {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.mrs-button-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.mrs-button:hover .mrs-button-icon {
+  transform: translateX(0);
+}
+
+.mrs-button-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  color: #2b2929;
+}
+
+.mrs-button:hover .mrs-button-text {
+  transform: translateX(100%);
+}
+
+.mrs-button-invisible-text {
+  visibility: hidden;
+}
