@@ -1,0 +1,21 @@
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: auto;
+}
+
+.child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: #2872FA;
+  color: #fff;
+  font-size: 1.25rem;
+}
