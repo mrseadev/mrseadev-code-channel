@@ -1,0 +1,25 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  padding: 20px;
+  text-align: center;
+}
+
+.box1 {
+  flex-grow: 1;
+  background-color: lightcoral;
+}
+
+.box2 {
+  flex-grow: 1;
+  background-color: lightblue;
+}
+
+.box3 {
+  flex-grow: 3;
+  background-color: lightgreen;
+}
