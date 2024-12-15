@@ -1,0 +1,21 @@
+.box1,
+.box2 {
+  width: 200px;
+  height: 200px;
+  margin: auto auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.box1 {
+  background: linear-gradient(to top, #4687f0, #023074);
+}
+
+.box2 {
+  background: linear-gradient(90deg, #f77802, #02df4b);
+  border-radius: 100%;
+}

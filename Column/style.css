@@ -1,0 +1,12 @@
+body {
+  font-size: 13px;
+}
+
+.content {
+  column-count: 3;
+  column-gap:35px;
+  column-rule: #b4b1b1 1px solid;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 20px;
+}
