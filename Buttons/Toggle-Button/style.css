@@ -1,0 +1,98 @@
+body {
+  font-family: "Fira Code", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+}
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 45px; /* Reduced height */
+  position: relative;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  width: 100%;
+  height: 100%;
+  background-color: #808080; /* Default grey color */
+  border-radius: 22.5px; /* Reduced radius */
+  transition: background-color 0.6s ease, box-shadow 0.3s ease, transform 0.2s,
+    margin-left 0.6s ease;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.toggle-label::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  border-radius: 22.5px; /* Reduced radius */
+  transition: margin-left 0.6s ease;
+}
+
+.toggle-checkbox:checked + .toggle-label::before {
+  margin-left: 50%; /* Move to right on toggle */
+}
+
+.toggle-label:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* General Styles */
+.toggle1 .toggle-checkbox:checked + .toggle-label {
+  background-color: #ff5722;
+}
+.toggle2 .toggle-checkbox:checked + .toggle-label {
+  background-color: #2196f3;
+}
+.toggle3 .toggle-checkbox:checked + .toggle-label {
+  background-color: #4caf50;
+}
+.toggle4 .toggle-checkbox:checked + .toggle-label {
+  background-color: #ff9800;
+}
+.toggle5 .toggle-checkbox:checked + .toggle-label {
+  background-color: #9c27b0;
+}
+.toggle6 .toggle-checkbox:checked + .toggle-label {
+  background-color: #607d8b;
+}
+.toggle7 .toggle-checkbox:checked + .toggle-label {
+  background-color: #ff7043;
+}
+.toggle8 .toggle-checkbox:checked + .toggle-label {
+  background-color: #009688;
+}
+.toggle9 .toggle-checkbox:checked + .toggle-label {
+  background-color: #8bc34a;
+}
+.toggle10 .toggle-checkbox:checked + .toggle-label {
+  background-color: #ffc107;
+}
+.toggle11 .toggle-checkbox:checked + .toggle-label {
+  background-color: #673ab7;
+}
+.toggle12 .toggle-checkbox:checked + .toggle-label {
+  background-color: #e91e63;
+}
