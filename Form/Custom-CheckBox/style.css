@@ -1,0 +1,111 @@
+body {
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin-top: 120px;
+  padding-left: 90px;
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: "Fira Code", monospace;
+}
+
+.checkbox-wrap input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border: 1px solid #4d4c4c;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+}
+
+.checkbox-wrap label {
+  margin-left: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.checkbox-wrap input[type="checkbox"]:checked::before {
+  /* content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M20.285 6.129a1 1 0 010 1.414l-10 10a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 14.414l9.285-9.285a1 1 0 011.414 0z"/></svg>'); */
+  /* content: '✓'; */
+  content: '✔';
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-top: 3px;
+}
+
+/* First checkbox and label */
+.checkbox-wrap input[type="checkbox"]#checkbox1:checked {
+  background-color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+.checkbox-wrap input[type="checkbox"]#checkbox1:checked + label {
+  color: #4caf50;
+}
+
+/* Second checkbox and label */
+.checkbox-wrap input[type="checkbox"]#checkbox2:checked {
+  background-color: #ff5722;
+  border: 2px solid #ff5722;
+}
+
+.checkbox-wrap input[type="checkbox"]#checkbox2:checked + label {
+  color: #ff5722;
+}
+
+/* Third checkbox and label */
+.checkbox-wrap input[type="checkbox"]#checkbox3:checked {
+  background-color: #2196f3;
+  border: 2px solid #2196f3;
+}
+
+.checkbox-wrap input[type="checkbox"]#checkbox3:checked + label {
+  color: #2196f3;
+}
+
+/* Fourth checkbox and label */
+.checkbox-wrap input[type="checkbox"]#checkbox4:checked {
+  background-color: #ffc107;
+  border: 2px solid #ffc107;
+}
+
+.checkbox-wrap input[type="checkbox"]#checkbox4:checked + label {
+  color: #ffc107;
+}
+
+/* Fifth checkbox and label */
+.checkbox-wrap input[type="checkbox"]#checkbox5:checked {
+  background-color: #9c27b0;
+  border: 2px solid #9c27b0;
+}
+
+.checkbox-wrap input[type="checkbox"]#checkbox5:checked + label {
+  color: #9c27b0;
+}
+
+/* Sixth checkbox and label */
+.checkbox-wrap input[type="checkbox"]#checkbox6:checked {
+  background-color: #00bcd4;
+  border: 2px solid #00bcd4;
+}
+
+.checkbox-wrap input[type="checkbox"]#checkbox6:checked + label {
+  color: #00bcd4;
+}
