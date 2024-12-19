@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Various Triangles</title>
+    <style>
+        .triangle-border {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid red;
+        }
+
+        .triangle-clip-path {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .triangle-svg {
+            display: inline-block;
+        }
+
+        .triangle-shapes {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid blue;
+            position: relative;
+        }
+
+        .triangle-shapes:before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 85px solid white;
+            position: absolute;
+            top: 15px;
+            left: -50px;
+        }
+
+        .triangle-grid .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 100px;
+            height: 100px;
+        }
+
+        .triangle-grid .top-left {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            background: linear-gradient(to bottom right, transparent 50%, green 50%);
+        }
+
+        .triangle-grid .bottom-right {
+            grid-column: 2 / span 2;
+            grid-row: 1 / span 2;
+            background: linear-gradient(to bottom left, transparent 50%, green 50%);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Triangle using border -->
+        <div class="triangle-border"></div>
+
+        <!-- Triangle using clip-path -->
+        <div class="triangle-clip-path"></div>
+
+        <!-- Triangle using SVG -->
+        <svg class="triangle-svg" height="100" width="100">
+            <polygon points="50,0 0,100 100,100" style="fill:rgb(95, 13, 13);"></polygon>
+        </svg>
+
+        <!-- Triangle using CSS Shapes -->
+        <div class="triangle-shapes"></div>
+
+        <!-- Triangle using CSS Grid -->
+        <div class="triangle-grid">
+            <div class="container">
+                <div class="top-left"></div>
+                <div class="bottom-right"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
