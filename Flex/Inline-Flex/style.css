@@ -1,0 +1,21 @@
+.container {
+  margin-top: 60px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: #000 1px solid;
+  padding: 5px 10px;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.social-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
