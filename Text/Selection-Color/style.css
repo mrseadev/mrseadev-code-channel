@@ -6,23 +6,23 @@ body {
 }
 
 .selection::selection {
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 .yellow::selection {
-  background-color: #ff0;
-  color: #000;
+  background-color: rgb(255, 255, 0);
+  color: rgb(0, 0, 0);
 }
 
 .blue::selection {
-  background-color: #0a4dc9;
+  background-color: rgb(10, 77, 201);
 }
 
 .purple::selection {
-  background-color: #8b00ff;
+  background-color: rgb(139, 0, 255);
 }
 p {
   margin: 10px 5px;
   padding: 10px;
-  border: #141414 1px solid;
+  border: rgb(20, 20, 20) 1px solid;
 }
