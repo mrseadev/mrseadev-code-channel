@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Fira Code", monospace;
+  line-height: 1.45;
+}
+
+.selection::selection {
+  color: #fff;
+}
+
+.yellow::selection {
+  background-color: #ff0;
+  color: #000;
+}
+
+.blue::selection {
+  background-color: #0a4dc9;
+}
+
+.purple::selection {
+  background-color: #8b00ff;
+}
+p {
+  margin: 10px 5px;
+  padding: 10px;
+  border: #141414 1px solid;
+}
