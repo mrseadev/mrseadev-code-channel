@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Fire+Code&display=swap");
+
+body {
+  font-family: "Fire Code", monospace;
+  line-height: 1.2;
+  counter-reset: my-count;
+}
+
+.mrs-section > h2 {
+  counter-increment: my-count;
+}
+
+.mrs-section > h2::before {
+  content: "✨[" counter(my-count) "]: ";
+}
+
+.mrs-section > p {
+  padding-left: 38px;
+}
