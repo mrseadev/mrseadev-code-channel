@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Aspect Ratio Boxes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <br>
+    <br>
+    <div class="box-container" id="aspectRectangle">
+        <div class="rectangle">Aspect Ratio: 16/9</div>
+    </div>
+
+    <div class="box-container" id="videoContainer">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/u_SG8qBt6ik"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        let expanding = true;
+
+        function animateBoxes() {
+            const rectangleContainer = document.getElementById('aspectRectangle');
+            const videoContainer = document.getElementById('videoContainer');
+
+            if (expanding) {
+                rectangleContainer.style.width = '90vw';
+                videoContainer.style.width = '90vw';
+            } else {
+                rectangleContainer.style.width = '60vw';
+                videoContainer.style.width = '60vw';
+            }
+            expanding = !expanding;
+        }
+
+        setInterval(animateBoxes, 2000); // Change size every 2 seconds
+
+        window.addEventListener('load', animateBoxes);
+    </script>
+</body>
+
+</html>
