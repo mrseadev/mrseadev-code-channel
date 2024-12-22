@@ -1,0 +1,13 @@
+body {
+  background-color: #000;
+  font-weight: bold;
+}
+
+.gradient-text {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  background: url(demo.jpg) no-repeat center center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
