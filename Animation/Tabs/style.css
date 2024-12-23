@@ -1,0 +1,56 @@
+:root {
+  --bg-tab: #ddd;
+  --bg-tab-active: #4b4949;
+  --color-active: #fff;
+}
+
+.tabs {
+  width: 100%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.tab-labels {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  background-color: var(--bg-tab);
+  padding: 5px 10px;
+}
+
+label {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--bg-tab);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+label:hover {
+  background-color: var(--bg-tab-active);
+  color: var(--color-active);
+}
+
+.tab-content {
+  padding: 5px 20px;
+  border-top: 1px solid #ddd;
+}
+
+.tab-panel {
+  display: none;
+}
+
+input#home:checked ~ .tab-content #home-content,
+input#contact:checked ~ .tab-content #contact-content,
+input#about:checked ~ .tab-content #about-content {
+  display: block;
+}
+
+input#home:checked ~ .tab-labels #tab-home,
+input#contact:checked ~ .tab-labels #tab-contact,
+input#about:checked ~ .tab-labels #tab-about {
+  background-color: var(--bg-tab-active);
+  color: var(--color-active);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle with Moving Line</title>
+    <style>
+        body {
+            background-color: black;
+            /* Màu nền của body */
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rectangle {
+            width: 300px;
+            height: 200px;
+            border: 3px solid rgb(23, 100, 7);
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .moving-line {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: -6px;
+            left: 0;
+            animation: moveLine 2s infinite linear;
+            /* Đoạn mã này di chuyển đường line */
+        }
+
+        @keyframes moveLine {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="rectangle">
+        <div class="moving-line"></div>
+    </div>
+
+</body>
+
+</html>
