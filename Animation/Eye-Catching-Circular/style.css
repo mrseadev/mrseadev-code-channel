@@ -1,0 +1,57 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #000;
+  padding: 4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-block: 0 2rem;
+}
+
+@property --fill {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+.mrs-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mrs-social a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  aspect-ratio: 1;
+  font-size: 1.5rem;
+  color: #7a7a7a;
+  background-color: #c2bdbd;
+  border-radius: 50%;
+  transition: color 0.5s ease-in-out;
+}
+
+.mrs-social a:hover {
+  color: #10ee2e;
+  --fill: 100%;
+}
+
+.mrs-social a::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  inset: -3px;
+  border-radius: inherit;
+
+  background: conic-gradient(#10ee2e var(--fill), transparent var(--fill));
+  transition: --fill 0.6s ease-in-out;
+}
