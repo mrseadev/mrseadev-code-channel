@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:700);
+
+body {
+  counter-reset: pages;
+}
+
+a {
+  counter-increment: pages;
+}
+
+a::before {
+  content: counter(pages);
+}
+
+body {
+  margin: 32px;
+  font: 700 32px/1 "Droid Sans", sans-serif;
+  color: #fff;
+  background-color: #3f4b58;
+}
+
+h1 {
+  margin: 0 0 32px;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0 0 8px 8px;
+  font-size: 1.45rem;
+}
+
+section {
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+a {
+  float: left;
+  width: 32px;
+  margin: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  border: solid 2px rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.1s;
+}
+
+a:hover {
+  border: solid 2px #fff;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px #fff;
+}
