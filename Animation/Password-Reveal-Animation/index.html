@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reveal Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .reveal-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .reveal-btn svg {
+            width: 24px;
+            height: 24px;
+            transition: opacity 0.3s ease;
+        }
+
+        .reveal-btn svg.show {
+            opacity: 1;
+        }
+
+        .reveal-btn svg.hide {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="password" class="password-input" id="password" placeholder="Enter your password">
+        <button class="reveal-btn" onclick="togglePassword()">
+            <svg id="eye-icon" class="hide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('eye-icon');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.remove('hide');
+                eyeIcon.classList.add('show');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('show');
+                eyeIcon.classList.add('hide');
+            }
+        }
+    </script>
+</body>
+
+</html>
