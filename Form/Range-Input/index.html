@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Range Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="slider-container">
+        <label for="range" class="slider-label">
+            Select a value between min - max:
+        </label>
+        <div
+            id="value" 
+            class="slider-value"
+        >
+        </div>
+        <input
+         type="range" 
+         id="range"
+         oninput="updateValue(this.value)" class="range-slider"
+         min="0"
+         max="10"
+         value="3">
+    </div>
+</body>
+
+</html>
