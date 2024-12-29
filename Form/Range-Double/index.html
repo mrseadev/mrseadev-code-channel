@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Range Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <h2>
+        Double Range Slider
+    </h2>
+    <div class="slider-container">
+        <input type="range"
+            min="0" max="100" value="20" 
+            id="minRange"
+            class="slider min-slider">
+        <input type="range" 
+            min="0" max="100"
+            value="80"
+            id="maxRange"
+            class="slider max-slider">
+        <div class="range-values">
+            <span id="minValue">20</span>
+            <span id="maxValue">80</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
