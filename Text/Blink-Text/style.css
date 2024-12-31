@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code&display=swap);
+
+body {
+  background-color: #000;
+  font-family: "Fira Code", monospace;
+}
+
+.blink {
+  margin-top: 100px;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(233, 236, 12);
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: blink .5s linear infinite;
+  text-align: center;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
