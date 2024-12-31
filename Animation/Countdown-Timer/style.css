@@ -1,0 +1,31 @@
+body {
+  text-align: center;
+  background-color: #121212;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-family: 2.5rem;
+}
+
+.timer-container {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #000, #171a24);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 40px rgba(252, 229, 21, 0.5);
+}
+
+.timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  font-weight: bold;
+  color: #ffffff;
+}
