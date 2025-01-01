@@ -1,0 +1,118 @@
+* {
+  transition: 0.5s ease all;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  font-size: 1.35rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #000000;
+  background: linear-gradient(135deg, #7cb9b3 0%, #254441 100%);
+  overflow: scroll;
+}
+
+.main {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.search {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  animation: hide 500ms ease;
+  margin: 0px auto;
+}
+.search input {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  left: 0px;
+  width: 70%;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+.search:hover {
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+.search.active {
+  width: 90%;
+  text-align: left;
+  padding: 0 10px;
+  animation: show 500ms ease;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+}
+.search.active input {
+  display: block;
+}
+.search.active .icon-open-search {
+  display: none !important;
+}
+.search.active .icon-close-empty {
+  float: right;
+  display: block !important;
+}
+.search .icon {
+  font-size: 1.2em;
+  line-height: 40px;
+}
+.search .icon.icon-open-search {
+  display: block;
+}
+.search .icon.icon-close-empty {
+  display: none;
+  font-size: 1.6em;
+  padding: 0px 10px;
+}
+
+@keyframes hide {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+  }
+  20% {
+    transform: rotate(-5deg)
+      matrix3d(0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, -20, 1, 1);
+  }
+  100% {
+    transform: rotate(0deg)
+      matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+  }
+}
+@keyframes show {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+  }
+  10% {
+    transform: rotate(10deg)
+      matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 10, 1, 1);
+  }
+  80% {
+    transform: rotate(-5deg)
+      matrix3d(1, 0.1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+  }
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+  }
+}
