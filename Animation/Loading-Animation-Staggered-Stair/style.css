@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #063b12;
+  margin: 0;
+}
+
+.loading {
+  display: flex;
+  color: #000;
+  font-size: 1.35em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.loading span {
+  padding: 0 18px;
+  line-height: 100px;
+  background-color: #f0cd34;
+  animation: bulge 2s infinite;
+}
+
+/* Adding animation delays based on position */
+.loading span:nth-child(1) {
+  animation-delay: 0s;
+}
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.loading span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.loading span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.loading span:nth-child(6) {
+  animation-delay: 1s;
+}
+.loading span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+@keyframes bulge {
+  50% {
+    box-shadow: 0 20px 0 #eee;
+    transform: translateY(-35px);
+  }
+}
