@@ -1,0 +1,103 @@
+:root {
+  --min-size: 2px;
+  --max-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.backdrop {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #6200ea, #d500f9);
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  background: white;
+  margin: 5px;
+  -webkit-animation-name: loader;
+  animation-name: loader;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.dot:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.dot:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.dot:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.dot:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.dot:nth-child(5) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+@-webkit-keyframes loader {
+  from {
+    width: 2px;
+    width: var(--min-size);
+    height: 2px;
+    height: var(--min-size);
+    border-radius: calc(2px / 2);
+    border-radius: calc(var(--min-size) / 2);
+  }
+  to {
+    width: 20px;
+    width: var(--max-size);
+    height: 20px;
+    height: var(--max-size);
+    border-radius: calc(20px / 2);
+    border-radius: calc(var(--max-size) / 2);
+  }
+}
+
+@keyframes loader {
+  from {
+    width: 2px;
+    width: var(--min-size);
+    height: 2px;
+    height: var(--min-size);
+    border-radius: calc(2px / 2);
+    border-radius: calc(var(--min-size) / 2);
+  }
+  to {
+    width: 20px;
+    width: var(--max-size);
+    height: 20px;
+    height: var(--max-size);
+    border-radius: calc(20px / 2);
+    border-radius: calc(var(--max-size) / 2);
+  }
+}
